@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 SentimentVision AI
+# 🧠 Sentiment Analyzer
 
 **Aspect-level sentiment analysis with multilingual support and real-time insights**
 
