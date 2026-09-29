@@ -112,9 +112,6 @@ run_app.bat
 ```bash
 .venv\Scripts\streamlit.exe run app.py
 ```
-
-Open your browser at **[http://localhost:8501](https://sentiment-analyzer-6ifxaw5h77hxxllj56p8db.streamlit.app/)** 🚀
-
 ---
 
 ## 🧠 AI Models
