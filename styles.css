@@ -1,0 +1,386 @@
+/* Modern Ultra-Sleek Dark Theme inspired by Modal.com */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --bg-primary: #06090E;
+    --bg-secondary: #0D121D;
+    --bg-card: #0E131F;
+    --border-faint: rgba(255, 255, 255, 0.08);
+    --border-active: rgba(34, 197, 94, 0.6);
+    --accent-green: #22C55E;
+    --accent-green-glow: rgba(34, 197, 94, 0.35);
+    --accent-cyan: #06B6D4;
+    --accent-cyan-glow: rgba(6, 182, 212, 0.35);
+    --text-primary: #FFFFFF;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+    --sentiment-pos: #22C55E;
+    --sentiment-neg: #EF4444;
+    --sentiment-neu: #38BDF8;
+}
+
+/* Global App Styling */
+html, body, [data-testid="stAppViewContainer"], .main {
+    background-color: var(--bg-primary) !important;
+    background-image: 
+        radial-gradient(rgba(34, 197, 94, 0.04) 1px, transparent 1px),
+        radial-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px) !important;
+    background-size: 32px 32px, 64px 64px !important;
+    background-position: 0 0, 16px 16px !important;
+    color: var(--text-primary) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+footer {
+    display: none !important;
+}
+
+#MainMenu {
+    visibility: hidden;
+}
+
+.block-container {
+    max-width: 820px !important;
+    padding-top: 3.5rem !important;
+    padding-bottom: 4rem !important;
+}
+
+/* Hero Header Section */
+.hero-header {
+    text-align: center;
+    margin-bottom: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 2.85rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin-bottom: 0.75rem;
+    line-height: 1.15;
+    text-align: center;
+    background: linear-gradient(180deg, #FFFFFF 30%, #A1A1AA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #94A3B8;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+/* 
+=====================================================
+TEXT AREA INPUT STYLING (Guaranteed Dark Background)
+=====================================================
+*/
+.stTextArea,
+[data-testid="stTextArea"],
+[data-testid="stTextArea"] > div,
+div[data-baseweb="textarea"],
+div[data-baseweb="base-input"] {
+    background-color: #0E131F !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    transition: all 0.3s ease-in-out !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.stTextArea:hover,
+[data-testid="stTextArea"]:hover,
+div[data-baseweb="textarea"]:hover,
+div[data-baseweb="base-input"]:hover {
+    border-color: rgba(34, 197, 94, 0.45) !important;
+}
+
+/* Focus glow */
+.stTextArea:focus-within,
+[data-testid="stTextArea"]:focus-within,
+div[data-baseweb="textarea"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    border-color: var(--accent-green) !important;
+    box-shadow: 0 0 0 1px var(--accent-green), 0 0 25px rgba(34, 197, 94, 0.35) !important;
+    outline: none !important;
+}
+
+/* Ensure textarea itself has dark bg, white text, and colored caret */
+.stTextArea textarea,
+[data-testid="stTextArea"] textarea,
+div[data-baseweb="textarea"] textarea,
+textarea {
+    background-color: #0E131F !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #22C55E !important;
+    font-size: 1.05rem !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1.6 !important;
+    padding: 16px !important;
+    border: none !important;
+    outline: none !important;
+    resize: vertical !important;
+}
+
+/* Placeholder styling */
+.stTextArea textarea::placeholder,
+[data-testid="stTextArea"] textarea::placeholder,
+textarea::placeholder {
+    color: #64748B !important;
+    -webkit-text-fill-color: #64748B !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+}
+
+/* Error Message in Red */
+.error-msg {
+    color: #EF4444;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.75rem auto 0.25rem auto;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Center Analyze Button Container Strictly */
+div[data-testid="column"]:nth-of-type(2) {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+div.stButton {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 1.25rem 0 1.5rem 0 !important;
+}
+
+div.stButton > button {
+    background-color: var(--accent-green) !important;
+    color: #052e16 !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    padding: 0.75rem 2.8rem !important;
+    border-radius: 9999px !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease-in-out !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.4) !important;
+    letter-spacing: -0.01em !important;
+    width: auto !important;
+    min-width: 180px !important;
+}
+
+div.stButton > button:hover {
+    background-color: #4ade80 !important;
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.7) !important;
+    transform: scale(1.02) !important;
+    color: #022c14 !important;
+}
+
+div.stButton > button:active {
+    transform: scale(0.98) !important;
+}
+
+/* Output Display Box */
+.output-container-initial {
+    background: #090E17;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: #6B7280;
+    font-size: 0.95rem;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0.5rem;
+}
+
+.output-container-active {
+    background: #090E17;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    border-radius: 16px;
+    padding: 1.75rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 0 35px rgba(34, 197, 94, 0.12), inset 0 0 20px rgba(34, 197, 94, 0.03);
+    animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse {
+    0% {
+        border-color: rgba(34, 197, 94, 0.35);
+        box-shadow: 0 0 20px rgba(34, 197, 94, 0.08);
+    }
+    100% {
+        border-color: rgba(6, 182, 212, 0.5);
+        box-shadow: 0 0 35px rgba(6, 182, 212, 0.18);
+    }
+}
+
+/* Translation notice banner */
+.translation-notice {
+    background: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.85rem;
+    color: #67E8F9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Result Cards */
+.aspect-card {
+    background: #101622;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.aspect-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.aspect-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.aspect-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.opinion-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #D1D5DB;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Sentiment Badges */
+.badge-positive {
+    background: rgba(34, 197, 94, 0.14);
+    color: #4ADE80;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+}
+
+.badge-negative {
+    background: rgba(239, 68, 68, 0.14);
+    color: #F87171;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
+.badge-neutral {
+    background: rgba(56, 189, 248, 0.14);
+    color: #38BDF8;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.explanation-text {
+    font-size: 0.92rem;
+    color: #CBD5E1;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.explanation-text strong {
+    color: #FFFFFF;
+}
+
+/* Stats Pill Bar */
+.stats-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.stat-chip {
+    background: #131B2A;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    color: #94A3B8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-chip b {
+    color: #FFFFFF;
+}
